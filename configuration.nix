@@ -22,7 +22,7 @@
     ];
 
  
-  nixPath = [
+  nix.nixPath = [
     "nixos-config=${config.users.users.jcorbalan.home}/nixos-config/configuration.nix"
     "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
     "/nix/var/nix/profiles/per-user/root/channels"
