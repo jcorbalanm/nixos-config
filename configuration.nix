@@ -261,7 +261,6 @@
     ffmpeg-full
     gnome-tweaks
     gnome-remote-desktop
-    gnome-terminal
     foliate
     cheese
     libreoffice
