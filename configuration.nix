@@ -130,6 +130,10 @@
 
 
   home-manager.users.jcorbalan = { pkgs, ... }: {
+    imports = [
+      ./dconf.nix
+    ];
+
     #isNormalUser = true;
     #home = "/home/jcorbalan";
     #description = "Julio... Corbalán Moreno";
