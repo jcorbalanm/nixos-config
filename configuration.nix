@@ -85,8 +85,8 @@
   services.xserver.displayManager.gdm.enable = true;
   #services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.desktopManager.xterm.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
+  #services.xserver.desktopManager.xterm.enable = true;
+  #services.xserver.desktopManager.xfce.enable = true;
 
   #services.xserver.desktopManager.cinnamon.enable = true;
   services.udev.packages = with pkgs; [ gnome-settings-daemon ];

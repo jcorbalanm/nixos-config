@@ -103,13 +103,6 @@ with lib.hm.gvariant;
       subtitle-font = "Sans Bold 11";
     };
 
-    "org/gnome/Weather" = {
-      locations = [ (mkVariant [ (mkUint32 2) (mkVariant [ "Alicante" "LEAL" true [ (mkTuple [ 0.6681702094873982 (-9.599310885968814e-3) ]) ] [ (mkTuple [ 0.6693337681398254 (-8.435752233541753e-3) ]) ] ]) ]) ];
-      window-height = 496;
-      window-maximized = false;
-      window-width = 992;
-    };
-
     "org/gnome/baobab/ui" = {
       is-maximized = true;
       window-size = mkTuple [ 1593 729 ];
@@ -851,13 +844,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/vitals" = {
-      hot-sensors = [ "_processor_usage_" "_memory_usage_" "_system_uptime_" "_battery_rate_" "_battery_time_left_" "_temperature_k10temp_tctl_" ];
+      hot-sensors = [ "_processor_usage_" "_memory_usage_" "_system_uptime_" "_temperature_k10temp_tctl_" ];
       show-battery = true;
-    };
-
-    "org/gnome/shell/weather" = {
-      automatic-location = true;
-      locations = [ (mkVariant [ (mkUint32 2) (mkVariant [ "Alicante" "LEAL" true [ (mkTuple [ 0.6681702094873982 (-9.599310885968814e-3) ]) ] [ (mkTuple [ 0.6693337681398254 (-8.435752233541753e-3) ]) ] ]) ]) ];
     };
 
     "org/gnome/shell/world-clocks" = {
