@@ -1,4 +1,4 @@
-# Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
+# Generated via dconf2nix: https://github.com/nix-commmunity/dconf2nix
 { lib, ... }:
 
 with lib.hm.gvariant;
@@ -31,7 +31,7 @@ with lib.hm.gvariant;
     };
 
     "com/github/johnfactotum/Foliate/viewer/view" = {
-      gap = 4.999999999999999e-2;
+      gap = mkDouble "4.999999999999999e-2";
       hyphenate = true;
       justify = true;
       max-block-size = mkUint32 1800;
@@ -72,7 +72,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/Console" = {
-      font-scale = 1.4000000000000004;
+      font-scale = mkDouble "1.4000000000000004";
       last-window-maximised = true;
       last-window-size = mkTuple [ 1462 828 ];
       theme = "auto";
@@ -103,6 +103,13 @@ with lib.hm.gvariant;
       subtitle-font = "Sans Bold 11";
     };
 
+    "org/gnome/Weather" = {
+      locations = [ (mkVariant (mkTuple [ (mkUint32 2) (mkVariant (mkTuple [ "Alicante" "LEAL" true [ (mkTuple [ (mkDouble "0.6681702094873982") (mkDouble "-9.599310885968814e-3") ]) ] [ (mkTuple [ (mkDouble "0.6693337681398254") (mkDouble "-8.435752233541753e-3") ]) ] ])) ])) ];
+      window-height = 496;
+      window-maximized = false;
+      window-width = 992;
+    };
+
     "org/gnome/baobab/ui" = {
       is-maximized = true;
       window-size = mkTuple [ 1593 729 ];
@@ -127,7 +134,7 @@ with lib.hm.gvariant;
 
     "org/gnome/calendar" = {
       active-view = "week";
-      week-view-zoom-level = 1.0;
+      week-view-zoom-level = mkDouble "1.0";
       window-maximized = true;
       window-size = mkTuple [ 768 600 ];
     };
@@ -142,7 +149,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "printers";
+      last-panel = "background";
       window-state = mkTuple [ 1294 679 false ];
     };
 
@@ -171,9 +178,9 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
-      picture-options = "centered";
-      picture-uri = "file:///home/jcorbalan/.local/share/backgrounds/2025-01-28-15-50-23-morphogenesis-d.svg";
-      picture-uri-dark = "file:///home/jcorbalan/.local/share/backgrounds/2025-01-28-15-50-23-morphogenesis-d.svg";
+      picture-options = "zoom";
+      picture-uri = "file:///home/jcorbalan/.local/share/backgrounds/2025-04-15-22-57-01-fondo.png";
+      picture-uri-dark = "file:///home/jcorbalan/.local/share/backgrounds/2025-04-15-22-57-01-fondo.png";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
@@ -198,12 +205,12 @@ with lib.hm.gvariant;
       clock-show-date = true;
       clock-show-seconds = true;
       clock-show-weekday = true;
-      color-scheme = "prefer-dark";
+      color-scheme = "default";
       cursor-theme = "Bibata-Modern-Ice";
       enable-animations = true;
       enable-hot-corners = false;
       gtk-enable-primary-paste = false;
-      gtk-theme = "Adwaita-dark";
+      gtk-theme = "Adwaita";
       icon-theme = "Colloid";
       show-battery-percentage = true;
     };
@@ -384,7 +391,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/peripherals/touchpad" = {
       click-method = "areas";
       natural-scroll = true;
-      speed = 0.2727272727272727;
+      speed = mkDouble "0.2727272727272727";
       two-finger-scrolling-enabled = true;
     };
 
@@ -396,7 +403,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/screensaver" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file:///home/jcorbalan/.local/share/backgrounds/2025-01-28-15-50-23-morphogenesis-d.svg";
+      picture-uri = "file:///home/jcorbalan/.local/share/backgrounds/2025-04-15-22-57-01-fondo.png";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
@@ -457,7 +464,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/evince" = {
-      document-directory = "file:///home/jcorbalan/Syncthing/Documentos/CV";
+      document-directory = mkTyped "ms" "file:///home/jcorbalan/Syncthing/Documentos/CV";
     };
 
     "org/gnome/evince/default" = {
@@ -471,8 +478,8 @@ with lib.hm.gvariant;
       sidebar-page = "thumbnails";
       sidebar-size = 148;
       sizing-mode = "automatic";
-      window-ratio = mkTuple [ 1.9149881751662616 1.2448185559296663 ];
-      zoom = 0.5060185239670296;
+      window-ratio = mkTuple [ (mkDouble "1.9149881751662616") (mkDouble "1.2448185559296663") ];
+      zoom = mkDouble "0.5060185239670296";
     };
 
     "org/gnome/evolution-data-server" = {
@@ -514,9 +521,9 @@ with lib.hm.gvariant;
       cpu-smooth-graph = true;
       cpu-stacked-area-chart = false;
       current-tab = "resources";
-      graph-data-points = 600;
+      graph-data-points = 300;
       logarithmic-scale = false;
-      maximized = true;
+      maximized = false;
       network-in-bits = false;
       network-total-in-bits = false;
       resources-memory-in-iec = false;
@@ -524,8 +531,8 @@ with lib.hm.gvariant;
       show-whose-processes = "user";
       smooth-refresh = true;
       update-interval = 1500;
-      window-height = 709;
-      window-width = 1244;
+      window-height = 928;
+      window-width = 891;
     };
 
     "org/gnome/gnome-system-monitor/disksview" = {
@@ -573,7 +580,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/maps" = {
-      last-viewed-location = [ 38.363769639391776 (-0.44249775764870947) ];
+      last-viewed-location = [ (mkDouble "38.363769639391776") (mkDouble "-0.44249775764870947") ];
       map-type = "MapsVectorSource";
       transportation-type = "pedestrian";
       window-maximized = false;
@@ -672,7 +679,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/papers" = {
-      document-directory = "/home/jcorbalan/Syncthing/Universidad/5to Ing. Inf./2ndo Cuatri/Desarrollo de Software e Arquitecturas Paralelas/Pr\225cticas/p2/doc";
+      document-directory = mkTyped "ms" "/home/jcorbalan/Syncthing/Universidad/5to Ing. Inf./2ndo Cuatri/Desarrollo de Software e Arquitecturas Paralelas/Prácticas/p2/doc";
     };
 
     "org/gnome/papers/default" = {
@@ -685,30 +692,30 @@ with lib.hm.gvariant;
       show-sidebar = false;
       sidebar-page = "thumbnails";
       sizing-mode = "free";
-      window-ratio = mkTuple [ 1.4564672521653819 1.2436304030217724 ];
-      zoom = 1.2642946267281283;
+      window-ratio = mkTuple [ (mkDouble "1.4564672521653819") (mkDouble "1.2436304030217724") ];
+      zoom = mkDouble "1.2642946267281283";
     };
 
     "org/gnome/pomodoro/state" = {
       timer-date = "2025-01-13T21:13:55+0000";
-      timer-elapsed = 0.0;
+      timer-elapsed = mkDouble "0.0";
       timer-paused = false;
-      timer-score = 0.0;
+      timer-score = mkDouble "0.0";
       timer-state = "null";
       timer-state-date = "2025-01-13T21:13:55+0000";
-      timer-state-duration = 0.0;
+      timer-state-duration = mkDouble "0.0";
     };
 
-    "org/gnome/portal/filechooser/GitKraken/Desktop" = {
-      last-folder-path = "/home/jcorbalan/Syncthing/Universidad/5to Ing. Inf./1er Cuatri/Sistemas Distribuidos/Pr\225cticas/EasyCab";
+    "org/gnome/portal/filechooser/GitKraken Desktop" = {
+      last-folder-path = "/home/jcorbalan/Syncthing/Universidad/5to Ing. Inf./1er Cuatri/Sistemas Distribuidos/Prácticas/EasyCab";
     };
 
     "org/gnome/portal/filechooser/org/gnome/Papers" = {
-      last-folder-path = "/home/jcorbalan/Syncthing/Universidad/5to Ing. Inf./2ndo Cuatri/Automatizaci\243n y Rob\243tica/Pr\225cticas";
+      last-folder-path = "/home/jcorbalan/Syncthing/Universidad/5to Ing. Inf./2ndo Cuatri/Automatización y Robótica/Prácticas";
     };
 
     "org/gnome/portal/filechooser/org/gnome/Settings" = {
-      last-folder-path = "/home/jcorbalan/Im\225genes";
+      last-folder-path = "/home/jcorbalan/Syncthing/Otros";
     };
 
     "org/gnome/portal/filechooser/org/gnome/tweaks" = {
@@ -718,8 +725,8 @@ with lib.hm.gvariant;
     "org/gnome/settings-daemon/plugins/color" = {
       night-light-enabled = true;
       night-light-schedule-automatic = false;
-      night-light-schedule-from = 19.0;
-      night-light-schedule-to = 9.0;
+      night-light-schedule-from = mkDouble "19.0";
+      night-light-schedule-to = mkDouble "9.0";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -755,35 +762,35 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/blur-my-shell/appfolder" = {
-      brightness = 0.6;
+      brightness = mkDouble "0.6";
       sigma = 30;
     };
 
     "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
       blur = true;
-      brightness = 0.6;
+      brightness = mkDouble "0.6";
       sigma = 30;
       static-blur = true;
       style-dash-to-dock = 0;
     };
 
     "org/gnome/shell/extensions/blur-my-shell/panel" = {
-      brightness = 0.6;
+      brightness = mkDouble "0.6";
       sigma = 30;
     };
 
     "org/gnome/shell/extensions/blur-my-shell/window-list" = {
-      brightness = 0.6;
+      brightness = mkDouble "0.6";
       sigma = 30;
     };
 
     "org/gnome/shell/extensions/caffeine" = {
       enable-fullscreen = false;
-      indicator-position-max = 3;
+      indicator-position-max = 2;
       show-indicator = "only-active";
       show-timer = true;
-      toggle-state = true;
-      user-enabled = true;
+      toggle-state = false;
+      user-enabled = false;
     };
 
     "org/gnome/shell/extensions/custom-accent-colors" = {
@@ -848,8 +855,16 @@ with lib.hm.gvariant;
       show-battery = true;
     };
 
+<<<<<<< HEAD
+=======
+    "org/gnome/shell/weather" = {
+      automatic-location = true;
+      locations = [ (mkVariant (mkTuple [ (mkUint32 2) (mkVariant (mkTuple [ "Alicante" "LEAL" true [ (mkTuple [ (mkDouble "0.6681702094873982") (mkDouble "-9.599310885968814e-3") ]) ] [ (mkTuple [ (mkDouble "0.6693337681398254") (mkDouble "-8.435752233541753e-3") ]) ] ])) ])) ];
+    };
+
+>>>>>>> c34de38 (generar dconf.nix con versión más reciente de dconf2nix)
     "org/gnome/shell/world-clocks" = {
-      locations = [];
+      locations = mkArray "v" [];
     };
 
     "org/gnome/tweaks" = {
@@ -857,13 +872,13 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      selected-color = mkTuple [ true 0.20000000298023224 0.8196078538894653 0.47843137383461 1.0 ];
+      selected-color = mkTuple [ true (mkDouble "0.20000000298023224") (mkDouble "0.8196078538894653") (mkDouble "0.47843137383461") (mkDouble "1.0") ];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
       date-format = "regular";
       location-mode = "path-bar";
-      show-hidden = false;
+      show-hidden = true;
       sidebar-width = 140;
       sort-column = "name";
       sort-directories-first = true;
@@ -884,13 +899,13 @@ with lib.hm.gvariant;
       sort-directories-first = false;
       sort-order = "ascending";
       type-format = "category";
-      window-position = mkTuple [ 358 97 ];
+      window-position = mkTuple [ 26 23 ];
       window-size = mkTuple [ 1203 871 ];
     };
 
     "org/virt-manager/virt-manager" = {
-      manager-window-height = 683;
-      manager-window-width = 964;
+      manager-window-height = 1011;
+      manager-window-width = 1920;
     };
 
     "org/virt-manager/virt-manager/confirm" = {
@@ -921,7 +936,7 @@ with lib.hm.gvariant;
     };
 
     "org/virt-manager/virt-manager/urls" = {
-      isos = [ "/home/jcorbalan/Descargas/virtio-win-0.1.266.iso" "/home/jcorbalan/Descargas/Win10_22H2_Spanish_x64v1.iso" ];
+      isos = [ "/home/jcorbalan/Descargas/nixos-gnome-24.11.716947.26d499fc9f1d-x86_64-linux.iso" "/home/jcorbalan/Descargas/virtio-win-0.1.266.iso" "/home/jcorbalan/Descargas/Win10_22H2_Spanish_x64v1.iso" ];
     };
 
     "org/virt-manager/virt-manager/vmlist-fields" = {
@@ -943,6 +958,11 @@ with lib.hm.gvariant;
     "org/virt-manager/virt-manager/vms/8e1f402060c249738d971a960d9e6b2d" = {
       autoconnect = 1;
       vm-window-size = mkTuple [ 1920 1011 ];
+    };
+
+    "org/virt-manager/virt-manager/vms/d4631ca3e7f84bfbb625bc8c29469c7a" = {
+      autoconnect = 1;
+      vm-window-size = mkTuple [ 1920 1048 ];
     };
 
   };
