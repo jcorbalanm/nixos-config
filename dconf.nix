@@ -855,14 +855,11 @@ with lib.hm.gvariant;
       show-battery = true;
     };
 
-<<<<<<< HEAD
-=======
     "org/gnome/shell/weather" = {
       automatic-location = true;
       locations = [ (mkVariant (mkTuple [ (mkUint32 2) (mkVariant (mkTuple [ "Alicante" "LEAL" true [ (mkTuple [ (mkDouble "0.6681702094873982") (mkDouble "-9.599310885968814e-3") ]) ] [ (mkTuple [ (mkDouble "0.6693337681398254") (mkDouble "-8.435752233541753e-3") ]) ] ])) ])) ];
     };
 
->>>>>>> c34de38 (generar dconf.nix con versión más reciente de dconf2nix)
     "org/gnome/shell/world-clocks" = {
       locations = mkArray "v" [];
     };
