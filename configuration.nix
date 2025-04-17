@@ -275,6 +275,7 @@
     alacritty
     tinycc
     gparted
+    ntfs3g
     lshw
     gnomeExtensions.appindicator
     gnomeExtensions.vitals
