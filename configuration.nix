@@ -21,7 +21,7 @@
       <home-manager/nixos>
     ];
 
- 
+
   nix.nixPath = [
     "nixos-config=${config.users.users.jcorbalan.home}/nixos-config/configuration.nix"
     "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
@@ -35,7 +35,7 @@
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
-  #boot.loader.grub.enable = true;  
+  #boot.loader.grub.enable = true;
 
   boot.loader.efi.canTouchEfiVariables = true;
   # boot.kernelParams = ["amdgpu.backlight=0"];
@@ -58,7 +58,7 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "es_ES.UTF-8";
-  
+
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "es_ES.UTF-8";
     LC_IDENTIFICATION = "es_ES.UTF-8";
@@ -70,7 +70,7 @@
     LC_TELEPHONE = "es_ES.UTF-8";
     LC_TIME = "es_ES.UTF-8";
   };
-  
+
   # Was not IN VM
   console = {
     font = "Lat2-Terminus16";
@@ -237,7 +237,7 @@
       userName = "Julio Corbalán Moreno";
       userEmail = "jcorbalanm@mailbox.org";
     };
-  
+
     home.stateVersion = "24.05";
   };
 
@@ -355,9 +355,9 @@
   programs.virt-manager.enable = true;
   users.groups.libvirtd.members = ["jcorbalan"];
   virtualisation.libvirtd = {
-  enable = true;
+    enable = true;
     qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
-  };  
+  }
   #virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
 
@@ -370,7 +370,7 @@
   #  enable = true;
   #  setSocketVariable = true;
   #};
-  
+
   #virtualisation.podman = {
   #  enable = true;
   #  dockerCompat = true;
