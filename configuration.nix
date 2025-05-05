@@ -227,6 +227,8 @@
         #dracula-theme.theme-dracula
         #vscodevim.vim
         yzhang.markdown-all-in-one
+        mkhl.direnv
+        llvm-vs-code-extensions.vscode-clangd
         #ms-vscode-remote.remote-ssh-edit
         #ms-vscode-remote.remote-ssh
       ];
