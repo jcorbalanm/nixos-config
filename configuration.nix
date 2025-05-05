@@ -326,6 +326,7 @@
     texstudio
     enter-tex
     #virtiofsd
+    dig
   ];
 
   programs.steam = {
