@@ -179,8 +179,8 @@ with lib.hm.gvariant;
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file:///home/jcorbalan/.local/share/backgrounds/2025-04-15-22-57-01-fondo.png";
-      picture-uri-dark = "file:///home/jcorbalan/.local/share/backgrounds/2025-04-15-22-57-01-fondo.png";
+      picture-uri = "file:///home/jcorbalan/Syncthing/Fotos/Fondos de pantalla/2025/fondo.png";
+      picture-uri-dark = "file:///home/jcorbalan/Syncthing/Fotos/Fondos de pantalla/2025/fondo.png";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
@@ -403,7 +403,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/screensaver" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file:///home/jcorbalan/.local/share/backgrounds/2025-04-15-22-57-01-fondo.png";
+      picture-uri = "file:///home/jcorbalan/Syncthing/Fotos/Fondos de pantalla/2025/fondo.png";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
