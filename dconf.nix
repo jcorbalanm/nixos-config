@@ -463,10 +463,6 @@ with lib.hm.gvariant;
       window-size = mkTuple [ 1920 1048 ];
     };
 
-    "org/gnome/evince" = {
-      document-directory = mkTyped "ms" "file:///home/jcorbalan/Syncthing/Documentos/CV";
-    };
-
     "org/gnome/evince/default" = {
       continuous = true;
       dual-page = false;
@@ -676,10 +672,6 @@ with lib.hm.gvariant;
     "org/gnome/nm-applet/eap/e5c0d2ae-9a69-4186-999b-a3005954260f" = {
       ignore-ca-cert = false;
       ignore-phase2-ca-cert = false;
-    };
-
-    "org/gnome/papers" = {
-      document-directory = mkTyped "ms" "/home/jcorbalan/Syncthing/Universidad/5to Ing. Inf./2ndo Cuatri/Desarrollo de Software e Arquitecturas Paralelas/Prácticas/p2/doc";
     };
 
     "org/gnome/papers/default" = {
