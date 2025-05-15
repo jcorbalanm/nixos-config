@@ -159,6 +159,7 @@
       #git
       vesktop
       spotify
+      spotify-qt
       notion-app-enhanced
       #vscode
       #vscodium
@@ -176,6 +177,7 @@
       gnomeExtensions.wiggle
       gnomeExtensions.top-bar-organizer
       gnomeExtensions.just-perfection
+      gnomeExtensions.spotify-tray
       bibata-cursors
       drawio
       # COSAS DE LA CONSOLA --
