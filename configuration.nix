@@ -329,6 +329,7 @@
     enter-tex
     #virtiofsd
     dig
+    folio
   ];
 
   programs.steam = {
