@@ -179,8 +179,8 @@ with lib.hm.gvariant;
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file:///home/jcorbalan/Syncthing/Fotos/Fondos de pantalla/2025/fondo.png";
-      picture-uri-dark = "file:///home/jcorbalan/Syncthing/Fotos/Fondos de pantalla/2025/fondo.png";
+      picture-uri = "file:///home/jcorbalan/Syncthing/Fotos/Fondos de pantalla/2025/kali-blur-base.png";
+      picture-uri-dark = "file:///home/jcorbalan/Syncthing/Fotos/Fondos de pantalla/2025/kali-blur-base.png";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
