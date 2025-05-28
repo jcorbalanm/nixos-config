@@ -187,6 +187,7 @@
       nerdfonts
       # TFG; LATEX
       texlive.combined.scheme-full
+      inkscape
     ];
 
     programs.zsh = {
