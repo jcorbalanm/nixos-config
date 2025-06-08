@@ -114,7 +114,7 @@
     caladea
     open-sans
     bront_fonts
-  ];
+  ]  ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
 
   programs.zsh.enable = true;
@@ -184,7 +184,6 @@
       thefuck
       starship
       # ----------------------
-      nerdfonts
       # TFG; LATEX
       texlive.combined.scheme-full
       inkscape
