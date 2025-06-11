@@ -392,6 +392,8 @@
   services.tailscale.useRoutingFeatures = "client";
   networking.firewall.checkReversePath = "loose";
 
+  services.squeezelite.enable = true;
+
   #services.plex = {
   #  enable = true; #false; #true;
   #  openFirewall = true;
