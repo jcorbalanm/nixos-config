@@ -233,6 +233,7 @@
         llvm-vs-code-extensions.vscode-clangd
         #ms-vscode-remote.remote-ssh-edit
         #ms-vscode-remote.remote-ssh
+        jeanp413.open-remote-ssh
       ];
    };
 
