@@ -188,7 +188,11 @@
       # TFG; LATEX
       texlive.combined.scheme-full
       inkscape
+<<<<<<< HEAD
       podman-desktop
+=======
+      squeezelite
+>>>>>>> 37c56a9 (Arreglar squeezelite)
     ];
 
     programs.zsh = {
@@ -242,6 +246,19 @@
       enable = true;
       userName = "Julio Corbalán Moreno";
       userEmail = "jcorbalanm@mailbox.org";
+    };
+  
+    systemd.user.startServices = true;
+    systemd.user.services.squeezelite =
+      let name = "myplayer";
+          server = "192.168.0.188";
+      in {
+        Unit.Description = "squeezelite player";
+        Unit.After = [ "network-online.target" "sound.target" ];
+        Install.WantedBy = [ "default.target" ];
+        Service = {
+          ExecStart = "${pkgs.squeezelite}/bin/squeezelite -s ${server} -d all=info";
+        };
     };
   
     home.stateVersion = "24.05";
@@ -393,7 +410,7 @@
   services.tailscale.useRoutingFeatures = "client";
   networking.firewall.checkReversePath = "loose";
 
-  services.squeezelite.enable = true;
+  #services.squeezelite.enable = true;
 
   #services.plex = {
   #  enable = true; #false; #true;
