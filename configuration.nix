@@ -188,11 +188,8 @@
       # TFG; LATEX
       texlive.combined.scheme-full
       inkscape
-<<<<<<< HEAD
       podman-desktop
-=======
       squeezelite
->>>>>>> 37c56a9 (Arreglar squeezelite)
     ];
 
     programs.zsh = {
