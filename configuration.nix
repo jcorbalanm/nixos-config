@@ -205,7 +205,7 @@
         plugins = [ "git" "thefuck" ];
         #theme = "af-magic";
       };
-      initExtra = ''
+      initContent = ''
         bindkey "''${key[Up]}" up-line-or-search
         bindkey "''${key[Down]}" down-line-or-search
         bindkey "^[[1;5D" backward-word
@@ -259,8 +259,8 @@
         Service = {
           ExecStart = "${pkgs.squeezelite}/bin/squeezelite -s ${server} -d all=info";
         };
-    };
-  
+      };
+
     home.stateVersion = "24.05";
   };
 
