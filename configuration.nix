@@ -188,6 +188,7 @@
       # TFG; LATEX
       texlive.combined.scheme-full
       inkscape
+      podman-desktop
     ];
 
     programs.zsh = {
