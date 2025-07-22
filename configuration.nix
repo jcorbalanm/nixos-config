@@ -178,6 +178,7 @@
       gnomeExtensions.top-bar-organizer
       gnomeExtensions.just-perfection
       gnomeExtensions.spotify-tray
+      gnomeExtensions.tiling-assistant
       bibata-cursors
       drawio
       # COSAS DE LA CONSOLA --
