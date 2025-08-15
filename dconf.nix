@@ -52,7 +52,6 @@ with lib.hm.gvariant;
       command-as-login-shell = false;
       context-aware-header-bar = true;
       fill-tabs = true;
-      floating-controls = false;
       font = "MartianMono Nerd Font 12";
       pretty = true;
       remember-window-size = true;
@@ -98,10 +97,6 @@ with lib.hm.gvariant;
       last-window-maximised = true;
       last-window-size = mkTuple [ 1462 828 ];
       theme = "auto";
-    };
-
-    "org/gnome/Extensions" = {
-      window-maximized = false;
     };
 
     "org/gnome/Geary" = {
@@ -525,8 +520,6 @@ with lib.hm.gvariant;
     "org/gnome/file-roller/file-selector" = {
       show-hidden = false;
       sidebar-size = 300;
-      sort-method = "name";
-      sort-type = "ascending";
       window-size = mkTuple [ (-1) (-1) ];
     };
 
@@ -732,6 +725,10 @@ with lib.hm.gvariant;
       last-folder-path = "/home/jcorbalan/Syncthing/Universidad/5to Ing. Inf./1er Cuatri/Sistemas Distribuidos/Prácticas/EasyCab";
     };
 
+    "org/gnome/portal/filechooser/chromium-browser" = {
+      last-folder-path = "/home/jcorbalan/Descargas";
+    };
+
     "org/gnome/portal/filechooser/com/github/johnfactotum/Foliate" = {
       last-folder-path = "/home/jcorbalan/Syncthing/Lecturas";
     };
@@ -775,227 +772,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
-      app-picker-layout = [ [
-        (mkDictionaryEntry ["org.gnome.Geary.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 0)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Contacts.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 1)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Weather.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 2)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.clocks.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 3)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Maps.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 4)])
-        ])])
-        (mkDictionaryEntry ["cups.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 5)])
-        ])])
-        (mkDictionaryEntry ["Alacritty.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 6)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Totem.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 7)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Calculator.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 8)])
-        ])])
-        (mkDictionaryEntry ["com.raggesilver.BlackBox.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 9)])
-        ])])
-        (mkDictionaryEntry ["simple-scan.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 10)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Settings.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 11)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.SystemMonitor.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 12)])
-        ])])
-        (mkDictionaryEntry ["btop.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 13)])
-        ])])
-        (mkDictionaryEntry ["xfce4-appfinder.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 14)])
-        ])])
-        (mkDictionaryEntry ["Utilities" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 15)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Snapshot.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 16)])
-        ])])
-        (mkDictionaryEntry ["yelp.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 17)])
-        ])])
-        (mkDictionaryEntry ["thunar-bulk-rename.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 18)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Cheese.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 19)])
-        ])])
-        (mkDictionaryEntry ["xfce4-screenshooter.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 20)])
-        ])])
-        (mkDictionaryEntry ["chromium-browser.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 21)])
-        ])])
-        (mkDictionaryEntry ["thunar-settings.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 22)])
-        ])])
-        (mkDictionaryEntry ["org.pulseaudio.pavucontrol.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 23)])
-        ])])
-      ] [
-        (mkDictionaryEntry ["dbeaver.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 0)])
-        ])])
-        (mkDictionaryEntry ["drawio.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 1)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.TextEditor.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 2)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.enter_tex.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 3)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Extensions.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 4)])
-        ])])
-        (mkDictionaryEntry ["filezilla.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 5)])
-        ])])
-        (mkDictionaryEntry ["me.dusansimic.DynamicWallpaper.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 6)])
-        ])])
-        (mkDictionaryEntry ["thunar.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 7)])
-        ])])
-        (mkDictionaryEntry ["virt-manager.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 8)])
-        ])])
-        (mkDictionaryEntry ["xfce4-taskmanager.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 9)])
-        ])])
-        (mkDictionaryEntry ["GitKraken Desktop.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 10)])
-        ])])
-        (mkDictionaryEntry ["gparted.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 11)])
-        ])])
-        (mkDictionaryEntry ["htop.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 12)])
-        ])])
-        (mkDictionaryEntry ["org.keepassxc.KeePassXC.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 13)])
-        ])])
-        (mkDictionaryEntry ["startcenter.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 14)])
-        ])])
-        (mkDictionaryEntry ["base.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 15)])
-        ])])
-        (mkDictionaryEntry ["calc.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 16)])
-        ])])
-        (mkDictionaryEntry ["draw.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 17)])
-        ])])
-        (mkDictionaryEntry ["impress.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 18)])
-        ])])
-        (mkDictionaryEntry ["math.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 19)])
-        ])])
-        (mkDictionaryEntry ["writer.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 20)])
-        ])])
-        (mkDictionaryEntry ["teams-for-linux.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 21)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Calendar.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 22)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Music.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 23)])
-        ])])
-      ] [
-        (mkDictionaryEntry ["motrix.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 0)])
-        ])])
-        (mkDictionaryEntry ["org.xfce.mousepad.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 1)])
-        ])])
-        (mkDictionaryEntry ["mpv.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 2)])
-        ])])
-        (mkDictionaryEntry ["nixos-manual.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 3)])
-        ])])
-        (mkDictionaryEntry ["notion-app-enhanced.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 4)])
-        ])])
-        (mkDictionaryEntry ["com.obsproject.Studio.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 5)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Papers.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 6)])
-        ])])
-        (mkDictionaryEntry ["postman.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 7)])
-        ])])
-        (mkDictionaryEntry ["gimp.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 8)])
-        ])])
-        (mkDictionaryEntry ["org.qbittorrent.qBittorrent.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 9)])
-        ])])
-        (mkDictionaryEntry ["org.xfce.Parole.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 10)])
-        ])])
-        (mkDictionaryEntry ["vlc.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 11)])
-        ])])
-        (mkDictionaryEntry ["xfce4-terminal.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 12)])
-        ])])
-        (mkDictionaryEntry ["texmaker.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 13)])
-        ])])
-        (mkDictionaryEntry ["texstudio.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 14)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Tour.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 15)])
-        ])])
-        (mkDictionaryEntry ["uget-gtk.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 16)])
-        ])])
-        (mkDictionaryEntry ["io.github.giantpinkrobots.varia.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 17)])
-        ])])
-        (mkDictionaryEntry ["vesktop.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 18)])
-        ])])
-        (mkDictionaryEntry ["org.xfce.ristretto.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 19)])
-        ])])
-        (mkDictionaryEntry ["org.gnome.Epiphany.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 20)])
-        ])])
-      ] [
-        (mkDictionaryEntry ["com.github.eneshecan.WhatsAppForLinux.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 0)])
-        ])])
-        (mkDictionaryEntry ["xterm.desktop" (mkVariant [
-          (mkDictionaryEntry ["position" (mkVariant 1)])
-        ])])
-      ] ];
       disable-user-extensions = false;
-      disabled-extensions = [ "light-style@gnome-shell-extensions.gcampax.github.com" "luminus-desktop@dikasp.gitlab" "gnome-clipboard@b00f.github.io" "apps-menu@gnome-shell-extensions.gcampax.github.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "sound-output-device-chooser@kgshank.net" "system-monitor@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "windowsNavigator@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "logowidget@github.com.howbea" "wiggle@mechtifs" "luminus-shell-y@dikasp.gitlab" "custom-accent-colors@demiskp" ];
-      enabled-extensions = [ "drive-menu@gnome-shell-extensions.gcampax.github.com" "ding@rastersoft.com" "nightthemeswitcher@romainvigier.fr" "gsconnect@andyholmes.github.io" "pomodoro@arun.codito.in" "caffeine@patapon.info" "Vitals@CoreCoding.com" "gtk4-ding@smedius.gitlab.com" "status-icons@gnome-shell-extensions.gcampax.github.com" "top-bar-organizer@julian.gse.jsts.xyz" "just-perfection-desktop@just-perfection" "blur-my-shell@aunetx" "appindicatorsupport@rgcjonas.gmail.com" "clipboard-indicator@tudmotu.com" "tiling-assistant@leleat-on-github" ];
+      disabled-extensions = [ "light-style@gnome-shell-extensions.gcampax.github.com" "luminus-desktop@dikasp.gitlab" "gnome-clipboard@b00f.github.io" "apps-menu@gnome-shell-extensions.gcampax.github.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "sound-output-device-chooser@kgshank.net" "system-monitor@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "windowsNavigator@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "logowidget@github.com.howbea" "wiggle@mechtifs" ];
+      enabled-extensions = [ "drive-menu@gnome-shell-extensions.gcampax.github.com" "ding@rastersoft.com" "luminus-shell-y@dikasp.gitlab" "appindicatorsupport@rgcjonas.gmail.com" "blur-my-shell@aunetx" "clipboard-indicator@tudmotu.com" "custom-accent-colors@demiskp" "nightthemeswitcher@romainvigier.fr" "gsconnect@andyholmes.github.io" "pomodoro@arun.codito.in" "caffeine@patapon.info" "Vitals@CoreCoding.com" "gtk4-ding@smedius.gitlab.com" "status-icons@gnome-shell-extensions.gcampax.github.com" "top-bar-organizer@julian.gse.jsts.xyz" "just-perfection-desktop@just-perfection" "tiling-assistant@leleat-on-github"];
       favorite-apps = [ "zen-beta.desktop" "thunderbird.desktop" "org.gnome.Nautilus.desktop" "codium.desktop" "spotify.desktop" "steam.desktop" "firefox.desktop" "com.github.johnfactotum.Foliate.desktop" ];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "46.2";
@@ -1041,12 +820,17 @@ with lib.hm.gvariant;
       user-enabled = false;
     };
 
+    "org/gnome/shell/extensions/clipboard-indicator" = {
+      history-size = 30;
+    };
+
     "org/gnome/shell/extensions/custom-accent-colors" = {
       accent-color = "green";
     };
 
     "org/gnome/shell/extensions/gsconnect" = {
       devices = [];
+      enabled = false;
       id = "1d576a9f-bc2a-4b71-af78-9ec1528d0669";
       name = "nixos-portatil";
     };
@@ -1073,85 +857,21 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/just-perfection" = {
-      accessibility-menu = true;
-      activities-button = true;
-      background-menu = true;
       calendar = false;
       clock-menu = true;
-      controls-manager-spacing-size = 0;
-      dash = true;
-      dash-icon-size = 0;
-      double-super-to-appgrid = true;
-      keyboard-layout = true;
       max-displayed-search-results = 0;
-      osd = true;
-      panel = true;
-      panel-button-padding-size = 0;
       panel-in-overview = true;
-      panel-size = 0;
       power-icon = true;
-      ripple-box = true;
-      search = true;
-      show-apps-button = true;
-      startup-status = 1;
       support-notifier-showed-version = 34;
       support-notifier-type = 0;
-      theme = false;
-      window-demands-attention-focus = false;
+      top-panel-position = 1;
       window-picker-icon = true;
-      window-preview-caption = true;
-      window-preview-close-button = true;
-      workspace = true;
-      workspace-background-corner-size = 0;
-      workspace-popup = true;
-      workspaces-in-app-grid = true;
       world-clock = false;
     };
 
     "org/gnome/shell/extensions/nightthemeswitcher/time" = {
       manual-schedule = true;
       nightthemeswitcher-ondemand-keybinding = [ "<Shift><Super>t" ];
-    };
-
-    "org/gnome/shell/extensions/tiling-assistant" = {
-      activate-layout0 = [];
-      activate-layout1 = [];
-      activate-layout2 = [];
-      activate-layout3 = [];
-      auto-tile = [];
-      center-window = [];
-      debugging-free-rects = [];
-      debugging-show-tiled-rects = [];
-      default-move-mode = 0;
-      dynamic-keybinding-behavior = 0;
-      focus-hint = 0;
-      focus-hint-color = "rgb(53,132,228)";
-      import-layout-examples = false;
-      last-version-installed = 52;
-      restore-window = [ "<Super>Down" ];
-      search-popup-layout = [];
-      tile-bottom-half = [ "<Super>KP_2" ];
-      tile-bottom-half-ignore-ta = [];
-      tile-bottomleft-quarter = [ "<Super>KP_1" ];
-      tile-bottomleft-quarter-ignore-ta = [];
-      tile-bottomright-quarter = [ "<Super>KP_3" ];
-      tile-bottomright-quarter-ignore-ta = [];
-      tile-edit-mode = [];
-      tile-left-half = [ "<Super>Left" "<Super>KP_4" ];
-      tile-left-half-ignore-ta = [];
-      tile-maximize = [ "<Super>Up" "<Super>KP_5" ];
-      tile-maximize-horizontally = [];
-      tile-maximize-vertically = [];
-      tile-right-half = [ "<Super>Right" "<Super>KP_6" ];
-      tile-right-half-ignore-ta = [];
-      tile-top-half = [ "<Super>KP_8" ];
-      tile-top-half-ignore-ta = [];
-      tile-topleft-quarter = [ "<Super>KP_7" ];
-      tile-topleft-quarter-ignore-ta = [];
-      tile-topright-quarter = [ "<Super>KP_9" ];
-      tile-topright-quarter-ignore-ta = [];
-      toggle-always-on-top = [];
-      toggle-tiling-popup = [];
     };
 
     "org/gnome/shell/extensions/top-bar-organizer" = {
@@ -1164,7 +884,6 @@ with lib.hm.gvariant;
       hot-sensors = [ "_processor_usage_" "_memory_usage_" "_system_uptime_" "_temperature_k10temp_tctl_" ];
       show-battery = true;
     };
-
     "org/gnome/shell/weather" = {
       automatic-location = true;
       locations = [ (mkVariant (mkTuple [ (mkUint32 2) (mkVariant (mkTuple [ "Alicante" "LEAL" true [ (mkTuple [ (mkDouble "0.6681702094873982") (mkDouble "-9.599310885968814e-3") ]) ] [ (mkTuple [ (mkDouble "0.6693337681398254") (mkDouble "-8.435752233541753e-3") ]) ] ])) ])) ];
