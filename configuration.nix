@@ -178,7 +178,7 @@
       gnomeExtensions.top-bar-organizer
       gnomeExtensions.just-perfection
       gnomeExtensions.spotify-tray
-      gnomeExtensions.tiling-assistant
+      gnomeExtensions.tiling-shell
       bibata-cursors
       drawio
       # COSAS DE LA CONSOLA --
@@ -305,7 +305,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.luminus-shell-y
     gnomeExtensions.luminus-desktop
-    gnomeExtensions.logo-widget
+    #gnomeExtensions.logo-widget
     gnomeExtensions.night-theme-switcher
     gnomeExtensions.custom-accent-colors
     gnomeExtensions.clipboard-indicator
