@@ -56,6 +56,7 @@ with lib.hm.gvariant;
       font = "MartianMono Nerd Font 12";
       pretty = true;
       remember-window-size = true;
+      scrollback-lines = mkUint32 5000;
       show-headerbar = true;
       show-menu-button = true;
       terminal-padding = mkTuple [ (mkUint32 10) (mkUint32 10) (mkUint32 10) (mkUint32 10) ];
@@ -63,6 +64,8 @@ with lib.hm.gvariant;
       theme-dark = "Adwaita Dark";
       theme-light = "Adwaita";
       was-maximized = false;
+      window-height = mkUint32 700;
+      window-width = mkUint32 1100;
       working-directory-mode = mkUint32 0;
     };
 
