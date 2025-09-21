@@ -346,6 +346,8 @@
     #virtiofsd
     dig
     folio
+    libheif
+    obsidian
   ];
 
   programs.steam = {
