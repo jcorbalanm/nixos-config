@@ -167,9 +167,6 @@
       teams-for-linux
       gitkraken
       whatsapp-for-linux
-      motrix
-      uget
-      varia
       postman
       chromium
       #gnome-pomodoro
