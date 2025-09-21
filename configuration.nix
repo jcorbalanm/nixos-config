@@ -176,6 +176,7 @@
       gnomeExtensions.just-perfection
       gnomeExtensions.spotify-tray
       gnomeExtensions.tiling-shell
+      gnomeExtensions.color-picker
       bibata-cursors
       drawio
       # COSAS DE LA CONSOLA --
