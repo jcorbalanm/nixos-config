@@ -219,6 +219,8 @@
         change-mac = "sudo bash -c 'sudo tailscale down; systemctl stop NetworkManager; macchanger -r wlp4s0; sudo systemctl start NetworkManager'";
         restore-mac = "sudo bash -c 'sudo tailscale down; systemctl stop NetworkManager; macchanger -p wlp4s0; sudo systemctl start NetworkManager'";
         rebuild = "sudo bash -c 'nano /home/jcorbalan/nixos-config/configuration.nix; nixos-rebuild switch'";
+	      disable-battery-conservation = "sudo /home/jcorbalan/lenovo-legion5-15arh05-scripts/BatteryConservation/disable_battery_conservation.sh";
+	      enable-battery-conservation = "sudo /home/jcorbalan/lenovo-legion5-15arh05-scripts/BatteryConservation/enable_battery_conservation.sh";
       };
       history.size = 10000;
     };
