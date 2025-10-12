@@ -188,6 +188,8 @@
       inkscape
       podman-desktop
       squeezelite
+      # Bajo
+      tuxguitar
     ];
 
     programs.zsh = {
