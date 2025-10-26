@@ -216,11 +216,13 @@
       shellAliases = {
         ls = "eza --icons";
         ll = "/run/current-system/sw/bin/ls -l";
-        update = "sudo nixos-rebuild switch";
-        upgrade = "sudo nixos-rebuild switch --upgrade";
+        checkout-branch = "cd /home/jcorbalan/Repositorios/nixos-config && git checkout $HOST  && cd -";
+        uncheckout-branch = "cd /home/jcorbalan/Repositorios/nixos-config && git checkout master && cd -";
+        update = " checkout-branch && sudo nixos-rebuild switch && uncheckout-branch";
+        upgrade = "checkout-branch && sudo nixos-rebuild switch --upgrade && uncheckout-branch";
         change-mac = "sudo bash -c 'sudo tailscale down; systemctl stop NetworkManager; macchanger -r wlp4s0; sudo systemctl start NetworkManager'";
         restore-mac = "sudo bash -c 'sudo tailscale down; systemctl stop NetworkManager; macchanger -p wlp4s0; sudo systemctl start NetworkManager'";
-        rebuild = "sudo bash -c 'nano /home/jcorbalan/Repositorios/nixos-config/configuration.nix; nixos-rebuild switch'";
+        rebuild = "checkout-branch && sudo bash -c 'nano /home/jcorbalan/Repositorios/nixos-config/configuration.nix; nixos-rebuild switch' && uncheckout-branch";
 	      disable-battery-conservation = "sudo /home/jcorbalan/lenovo-legion5-15arh05-scripts/BatteryConservation/disable_battery_conservation.sh";
 	      enable-battery-conservation = "sudo /home/jcorbalan/lenovo-legion5-15arh05-scripts/BatteryConservation/enable_battery_conservation.sh";
       };

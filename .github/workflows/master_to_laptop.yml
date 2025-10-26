@@ -1,0 +1,19 @@
+name: Sync master to laptop
+on:
+  push:
+    branches: [ "master" ]
+jobs:
+  sync-branch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Merge master -> nixos-portatil
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: master
+          target_branch: nixos-portatil
+          github_token: ${{ secrets.GITHUB_TOKEN }}
