@@ -881,7 +881,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/vitals" = {
-      hot-sensors = [ "_processor_usage_" "_memory_usage_" "_system_uptime_" "_temperature_k10temp_tctl_" ];
+      hot-sensors = [ "_processor_usage_" "_memory_usage_" "_system_uptime_" "_temperature_k10temp_tctl_" "_battery_time_left" ];
       show-battery = true;
     };
     "org/gnome/shell/weather" = {
