@@ -216,7 +216,7 @@
       shellAliases = {
         ls = "eza --icons";
         ll = "/run/current-system/sw/bin/ls -l";
-        checkout-branch = "cd /home/jcorbalan/Repositorios/nixos-config && git checkout $HOST  && cd -";
+        checkout-branch = "cd /home/jcorbalan/Repositorios/nixos-config && git pull --all && git checkout $HOST  && cd -";
         uncheckout-branch = "cd /home/jcorbalan/Repositorios/nixos-config && git checkout master && cd -";
         update = " checkout-branch && sudo nixos-rebuild switch && uncheckout-branch";
         upgrade = "checkout-branch && sudo nixos-rebuild switch --upgrade && uncheckout-branch";
