@@ -8,10 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: Merge master -> laptop
+      - name: Merge master -> nixos-portatil
         uses: devmasx/merge-branch@master
         with:
           type: now
           from_branch: master
-          target_branch: laptop
+          target_branch: nixos-portatil
           github_token: ${{ secrets.GITHUB_TOKEN }}
