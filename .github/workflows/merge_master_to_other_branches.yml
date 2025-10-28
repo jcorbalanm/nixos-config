@@ -1,4 +1,4 @@
-name: Sync master to both computers branches
+name: Merge master to both computers branches
 on:
   push:
     branches: [ "master" ]
