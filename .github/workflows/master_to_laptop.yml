@@ -1,4 +1,4 @@
-name: Sync master to laptop
+name: Sync master to both computers branches
 on:
   push:
     branches: [ "master" ]
@@ -16,4 +16,13 @@ jobs:
           type: now
           from_branch: master
           target_branch: nixos-portatil
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+
+      - name: Merge master -> nixos-pc
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: master
+          target_branch: nixos-pc
           github_token: ${{ secrets.GITHUB_TOKEN }}
