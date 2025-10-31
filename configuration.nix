@@ -156,7 +156,7 @@
       tree
       neofetch
       keepassxc
-      #git
+      lazygit
       vesktop
       spotify
       spotify-qt
