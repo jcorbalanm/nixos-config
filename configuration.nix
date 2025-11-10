@@ -246,7 +246,10 @@
     programs.git = {
       enable = true;
       userName = "Julio Corbalán Moreno";
-      userEmail = "jcorbalanm@mailbox.org";
+      userEmail = "jcorbalan@mailbox.org";
+      signing = {
+        signByDefault = true;
+      };
     };
   
     systemd.user.startServices = true;
