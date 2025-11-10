@@ -247,6 +247,9 @@
       enable = true;
       userName = "Julio Corbalán Moreno";
       userEmail = "jcorbalanm@mailbox.org";
+      signing = {
+        signByDefault = true;
+      };
     };
   
     systemd.user.startServices = true;
