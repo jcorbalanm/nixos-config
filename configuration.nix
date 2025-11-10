@@ -352,7 +352,12 @@
     folio
     libheif
     obsidian
+    gnupg
   ];
+
+  programs.gnupg.agent = {
+    enable = true;
+  };
 
   programs.steam = {
     enable = true;
