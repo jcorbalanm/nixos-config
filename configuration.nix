@@ -347,9 +347,7 @@
     dynamic-wallpaper
     papers
     #zen-browser
-    texmaker
     texstudio
-    enter-tex
     #virtiofsd
     dig
     folio
