@@ -314,7 +314,7 @@
     gnomeExtensions.luminus-desktop
     #gnomeExtensions.logo-widget
     gnomeExtensions.night-theme-switcher
-    gnomeExtensions.custom-accent-colors
+    #gnomeExtensions.custom-accent-colors
     gnomeExtensions.clipboard-indicator
     tela-icon-theme
     colloid-icon-theme
