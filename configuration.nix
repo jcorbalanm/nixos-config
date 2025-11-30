@@ -82,9 +82,9 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
+  services.displayManager.gdm.enable = true;
   #services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.desktopManager.gnome.enable = true;
   #services.xserver.desktopManager.xterm.enable = true;
   #services.xserver.desktopManager.xfce.enable = true;
 
@@ -245,8 +245,10 @@
 
     programs.git = {
       enable = true;
-      userName = "Julio Corbalán Moreno";
-      userEmail = "jcorbalan@mailbox.org";
+      settings = {
+        userName = "Julio Corbalán Moreno";
+        userEmail = "jcorbalan@mailbox.org";
+      };
       signing = {
         signByDefault = true;
       };
@@ -478,7 +480,7 @@
   # and migrated your data accordingly.
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "24.05"; # Did you read the comment?
+  stdenv.hostPlatform.system.stateVersion = "24.05"; # Did you read the comment?
 
 }
 
