@@ -166,7 +166,7 @@
       blackbox-terminal
       teams-for-linux
       gitkraken
-      whatsapp-for-linux
+      wasistlos
       postman
       chromium
       #gnome-pomodoro
