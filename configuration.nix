@@ -180,7 +180,7 @@
       bibata-cursors
       drawio
       # COSAS DE LA CONSOLA --
-      thefuck
+      pay-respects
       starship
       # ----------------------
       # TFG; LATEX
@@ -199,7 +199,7 @@
       syntaxHighlighting.enable = true;
       oh-my-zsh = {
         enable = true;
-        plugins = [ "git" "thefuck" ];
+        plugins = [ "git" "pay-respects" ];
         #theme = "af-magic";
       };
       initContent = ''
