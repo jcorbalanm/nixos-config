@@ -341,15 +341,12 @@
     mpv
     #hfsprogs
     filezilla
-    #postman
-    #steam
     direnv
     vdhcoapp # Video download helper
     inetutils
     dynamic-wallpaper
     papers
     #zen-browser
-    texstudio
     #virtiofsd
     dig
     folio
