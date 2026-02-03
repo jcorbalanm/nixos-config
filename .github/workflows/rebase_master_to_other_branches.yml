@@ -12,18 +12,25 @@ jobs:
           - nixos-portatil
           - nixos-pc
 
+    concurrency:
+      group: rebase-${{ matrix.branch }}
+      cancel-in-progress: false
+
     steps:
-      - name: Checkout target branch
+      - name: Checkout ${{ matrix.branch }}
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ matrix.branch }}
 
-      - name: Rebase master onto ${{ matrix.branch }}
+      - name: Rebase ${{ matrix.branch }} onto master
         id: rebase
         uses: martincostello/rebaser@v3
+        with:
+          branch: master
+          user-email: github-actions[bot]@users.noreply.github.com
+          user-name: github-actions[bot]
 
       - name: Push rebased branch
         if: steps.rebase.outputs.result == 'success'
-        run: |
-          git push --force-with-lease origin ${{ matrix.branch }}
+        run: git push --force-with-lease origin ${{ matrix.branch }}
