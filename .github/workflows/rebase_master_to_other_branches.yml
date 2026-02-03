@@ -1,0 +1,29 @@
+name: Rebase master to both computers branches
+on:
+  push:
+    branches: [ "master" ]
+jobs:
+  sync-branches:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        branch:
+          - nixos-portatil
+          - nixos-pc
+
+    steps:
+      - name: Checkout target branch
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          ref: ${{ matrix.branch }}
+
+      - name: Rebase master onto ${{ matrix.branch }}
+        id: rebase
+        uses: martincostello/rebaser@v3
+
+      - name: Push rebased branch
+        if: steps.rebase.outputs.result == 'success'
+        run: |
+          git push --force-with-lease origin ${{ matrix.branch }}
