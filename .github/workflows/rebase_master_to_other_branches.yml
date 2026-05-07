@@ -5,6 +5,8 @@ on:
 jobs:
   sync-branches:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     strategy:
       matrix:
         branch:
@@ -19,6 +21,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ matrix.branch }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Rebase ${{ matrix.branch }} onto master
         run: |
