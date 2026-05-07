@@ -154,7 +154,7 @@
       eza
       firefox
       tree
-      neofetch
+      fastfetch
       keepassxc
       lazygit
       vesktop
