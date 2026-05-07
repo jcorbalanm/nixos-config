@@ -5,17 +5,14 @@ on:
 jobs:
   sync-branches:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         branch:
           - nixos-portatil
           - nixos-pc
-
     concurrency:
       group: rebase-${{ matrix.branch }}
       cancel-in-progress: false
-
     steps:
       - name: Checkout ${{ matrix.branch }}
         uses: actions/checkout@v6
@@ -24,13 +21,15 @@ jobs:
           ref: ${{ matrix.branch }}
 
       - name: Rebase ${{ matrix.branch }} onto master
-        id: rebase
-        uses: martincostello/rebaser@v3
-        with:
-          branch: master
-          user-email: github-actions[bot]@users.noreply.github.com
-          user-name: github-actions[bot]
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git fetch origin master
 
-      - name: Push rebased branch
-        if: steps.rebase.outputs.result == 'success'
-        run: git push --force-with-lease origin ${{ matrix.branch }}
+          if git merge-base --is-ancestor origin/master HEAD; then
+            echo "Branch is already up to date with master."
+            exit 0
+          fi
+
+          git rebase origin/master
+          git push --force-with-lease origin ${{ matrix.branch }}
