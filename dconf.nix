@@ -769,6 +769,7 @@ with lib.hm.gvariant;
     "org/gnome/settings-daemon/plugins/power" = {
       sleep-inactive-ac-type = "nothing";
       sleep-inactive-battery-timeout = 1200;
+      power-button-action = "suspend";
     };
 
     "org/gnome/shell" = {
