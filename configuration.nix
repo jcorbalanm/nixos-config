@@ -159,6 +159,7 @@
       lazygit
       vesktop
       spotify
+      spotify-tray
       spotify-qt
       notion-app-enhanced
       #vscode
@@ -174,7 +175,6 @@
       gnomeExtensions.wiggle
       gnomeExtensions.top-bar-organizer
       gnomeExtensions.just-perfection
-      gnomeExtensions.spotify-tray
       gnomeExtensions.tiling-shell
       gnomeExtensions.color-picker
       bibata-cursors
