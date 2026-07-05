@@ -166,7 +166,7 @@
       blackbox-terminal
       teams-for-linux
       gitkraken
-      wasistlos
+      karere
       postman
       chromium
       #gnome-pomodoro
