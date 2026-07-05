@@ -339,7 +339,6 @@
     #hfsprogs
     filezilla
     direnv
-    vdhcoapp # Video download helper
     inetutils
     dynamic-wallpaper
     papers
