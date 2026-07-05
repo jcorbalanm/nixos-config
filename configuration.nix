@@ -245,8 +245,8 @@
 
     programs.git = {
       enable = true;
-      userName = "Julio Corbalán Moreno";
-      userEmail = "jcorbalan@mailbox.org";
+      settings.user.name = "Julio Corbalán Moreno";
+      settings.user.email = "jcorbalan@mailbox.org";
       signing = {
         signByDefault = true;
       };
