@@ -149,7 +149,7 @@
     };
 
     home.packages = with pkgs; [
-      (builtins.getFlake "github:0xc000022070/zen-browser-flake").packages."${system}".beta
+      (builtins.getFlake "github:0xc000022070/zen-browser-flake").packages."${stdenv.hostPlatform.system}".beta
       #inputs.zen-browser.packages."${system}".default # beta
       eza
       firefox
