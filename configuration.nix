@@ -229,9 +229,9 @@
       history.size = 10000;
     };
 
-    programs.vscode = {
+    programs.vscodium = {
       enable = true;
-      package = pkgs.vscodium;
+      #package = pkgs.vscodium;
       profiles.default.extensions = with pkgs.vscode-extensions; [
         #dracula-theme.theme-dracula
         #vscodevim.vim
