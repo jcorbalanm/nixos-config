@@ -310,7 +310,6 @@
     gnomeExtensions.gsconnect
     gnomeExtensions.sound-output-device-chooser
     gnomeExtensions.blur-my-shell
-    gnomeExtensions.luminus-shell-y
     gnomeExtensions.luminus-desktop
     #gnomeExtensions.logo-widget
     gnomeExtensions.night-theme-switcher
