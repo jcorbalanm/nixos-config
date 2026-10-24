@@ -124,6 +124,9 @@
     description = "Julio Corbalán Moreno";
     extraGroups = [ "wheel" "networkmanager" "docker" "audio"]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOnJczJdAsB8wuI9yDWbRTCkclSK+vi6gFIeMWXHB7OU jcorbalan@mailbox.org"
+    ];
   };
   #home-manager.users.jcorbalan = { pkgs, ... }: {
   #  program.zsh.enable = true;
@@ -446,7 +449,19 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    openFirewall = false;
+    settings = {
+      PasswordAuthentication = false;
+      KbdInteractiveAuthentication = false;
+      PermitRootLogin = "no";
+      AllowUsers = [ "jcorbalan" ];
+      MaxAuthTries = 3;
+      PerSourcePenalties = "crash:3600s authfail:3600s max:86400s";
+    };
+  };
+  networking.firewall.interfaces."tailscale0".allowedTCPPorts = [ 22 ];
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
