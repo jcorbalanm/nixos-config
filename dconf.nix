@@ -9,19 +9,6 @@ with lib.hm.gvariant;
       keyrings-selected = [ "gnupg://" ];
     };
 
-    "apps/seahorse/windows/key-manager" = {
-      height = 476;
-      width = 600;
-    };
-
-    "ca/desrt/dconf-editor" = {
-      saved-pathbar-path = "/org/gnome/settings-daemon/plugins/power/";
-      saved-view = "/org/gnome/settings-daemon/plugins/power/";
-      window-height = 500;
-      window-is-maximized = true;
-      window-width = 540;
-    };
-
     "com/github/johnfactotum/Foliate/library" = {
       view-mode = "grid";
     };
@@ -41,13 +28,6 @@ with lib.hm.gvariant;
       theme = "default";
     };
 
-    "com/github/johnfactotum/Foliate/window" = {
-      default-height = 851;
-      default-width = 1333;
-      fullscreened = false;
-      maximized = true;
-    };
-
     "com/raggesilver/BlackBox" = {
       command-as-login-shell = false;
       context-aware-header-bar = true;
@@ -62,9 +42,6 @@ with lib.hm.gvariant;
       theme-bold-is-bright = false;
       theme-dark = "Adwaita Dark";
       theme-light = "Adwaita";
-      was-maximized = false;
-      window-height = mkUint32 700;
-      window-width = mkUint32 1100;
       working-directory-mode = mkUint32 0;
     };
 
@@ -82,20 +59,12 @@ with lib.hm.gvariant;
       trash-dir = "/home/jcorbalan/Syncthing/Apps/folio";
     };
 
-    "com/toolstack/Folio/WindowState" = {
-      maximized = false;
-      note = "Varios/Nota";
-      text-scale = 130;
-    };
-
     "org/gnome/Connections" = {
       first-run = false;
     };
 
     "org/gnome/Console" = {
       font-scale = mkDouble "1.4000000000000004";
-      last-window-maximised = true;
-      last-window-size = mkTuple [ 1462 828 ];
       theme = "auto";
     };
 
@@ -107,33 +76,14 @@ with lib.hm.gvariant;
       show-properties = true;
     };
 
-    "org/gnome/Snapshot" = {
-      is-maximized = false;
-      window-height = 640;
-      window-width = 800;
-    };
-
-    "org/gnome/TextEditor" = {
-      last-save-directory = "file:///home/jcorbalan/Escritorio";
-    };
-
     "org/gnome/Totem" = {
       active-plugins = [ "open-directory" "variable-rate" "movie-properties" "skipto" "autoload-subtitles" "recent" "screensaver" "screenshot" "apple-trailers" "rotation" "mpris" "save-file" "vimeo" ];
-      open-uri = "file:///home/jcorbalan/Descargas/REDACTED";
       subtitle-encoding = "UTF-8";
       subtitle-font = "Sans Bold 11";
     };
 
     "org/gnome/Weather" = {
       locations = [ (mkVariant (mkTuple [ (mkUint32 2) (mkVariant (mkTuple [ "Alicante" "LEAL" true [ (mkTuple [ (mkDouble "0.6681702094873982") (mkDouble "-9.599310885968814e-3") ]) ] [ (mkTuple [ (mkDouble "0.6693337681398254") (mkDouble "-8.435752233541753e-3") ]) ] ])) ])) ];
-      window-height = 496;
-      window-maximized = false;
-      window-width = 992;
-    };
-
-    "org/gnome/baobab/ui" = {
-      is-maximized = true;
-      window-size = mkTuple [ 1593 729 ];
     };
 
     "org/gnome/calculator" = {
@@ -148,16 +98,12 @@ with lib.hm.gvariant;
       source-units = "degree";
       target-currency = "";
       target-units = "radian";
-      window-maximized = false;
-      window-size = mkTuple [ 383 626 ];
       word-size = 64;
     };
 
     "org/gnome/calendar" = {
       active-view = "week";
       week-view-zoom-level = mkDouble "1.0";
-      window-maximized = true;
-      window-size = mkTuple [ 768 600 ];
     };
 
     "org/gnome/cheese" = {
@@ -455,10 +401,6 @@ with lib.hm.gvariant;
       settings-migration-done = true;
     };
 
-    "org/gnome/enter_tex/preferences/file-browser" = {
-      current-directory = "file:///home/jcorbalan";
-    };
-
     "org/gnome/enter_tex/preferences/ui" = {
       bottom-panel-visible = true;
       edit-toolbar-visible = true;
@@ -469,22 +411,8 @@ with lib.hm.gvariant;
       side-panel-visible = false;
     };
 
-    "org/gnome/enter_tex/state/window" = {
-      documents = [ "file:///home/jcorbalan/Syncthing/Universidad/5to%20Ing.%20Inf./2ndo%20Cuatri/REDACTED" ];
-      side-panel-size = 256;
-      size = mkTuple [ 1920 1011 ];
-      state = 43908;
-      structure-paned-position = 100;
-      vertical-paned-position = 726;
-    };
-
     "org/gnome/epiphany" = {
       ask-for-default = false;
-    };
-
-    "org/gnome/epiphany/state" = {
-      is-maximized = true;
-      window-size = mkTuple [ 1920 1048 ];
     };
 
     "org/gnome/evince/default" = {
@@ -498,8 +426,6 @@ with lib.hm.gvariant;
       sidebar-page = "thumbnails";
       sidebar-size = 148;
       sizing-mode = "automatic";
-      window-ratio = mkTuple [ (mkDouble "1.9149881751662616") (mkDouble "1.2448185559296663") ];
-      zoom = mkDouble "0.5060185239670296";
     };
 
     "org/gnome/evolution-data-server" = {
@@ -511,30 +437,19 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/file-roller/dialogs/extract" = {
-      height = 800;
       recreate-folders = true;
       skip-newer = false;
-      width = 1000;
     };
 
     "org/gnome/file-roller/file-selector" = {
       show-hidden = false;
-      sidebar-size = 300;
-      window-size = mkTuple [ (-1) (-1) ];
     };
 
     "org/gnome/file-roller/listing" = {
       list-mode = "as-folder";
-      name-column-width = 584;
       show-path = false;
       sort-method = "name";
       sort-type = "descending";
-    };
-
-    "org/gnome/file-roller/ui" = {
-      sidebar-width = 200;
-      window-height = 480;
-      window-width = 1134;
     };
 
     "org/gnome/gnome-system-monitor" = {
@@ -543,7 +458,6 @@ with lib.hm.gvariant;
       current-tab = "resources";
       graph-data-points = 300;
       logarithmic-scale = false;
-      maximized = false;
       network-in-bits = false;
       network-total-in-bits = false;
       resources-memory-in-iec = false;
@@ -551,8 +465,6 @@ with lib.hm.gvariant;
       show-whose-processes = "user";
       smooth-refresh = true;
       update-interval = 1500;
-      window-height = 928;
-      window-width = 891;
     };
 
     "org/gnome/gnome-system-monitor/disksview" = {
@@ -600,12 +512,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/maps" = {
-      last-viewed-location = [ (mkDouble "38.363769639391776") (mkDouble "-0.44249775764870947") ];
       map-type = "MapsVectorSource";
       transportation-type = "pedestrian";
-      window-maximized = false;
-      window-size = [ 1097 420 ];
-      zoom-level = 18;
     };
 
     "org/gnome/mutter" = {
@@ -637,65 +545,6 @@ with lib.hm.gvariant;
       show-image-thumbnails = "always";
     };
 
-    "org/gnome/nautilus/window-state" = {
-      maximized = true;
-    };
-
-    "org/gnome/nm-applet/eap/29f6a698-b97c-48f0-8c73-48ef0191513b" = {
-      ignore-ca-cert = false;
-      ignore-phase2-ca-cert = false;
-    };
-
-    "org/gnome/nm-applet/eap/418c7498-39ae-325c-8e5e-b35f691695b7" = {
-      ignore-ca-cert = false;
-      ignore-phase2-ca-cert = false;
-    };
-
-    "org/gnome/nm-applet/eap/81c38b30-5988-4e88-b43d-b63adf61835e" = {
-      ignore-ca-cert = false;
-      ignore-phase2-ca-cert = false;
-    };
-
-    "org/gnome/nm-applet/eap/83776dd4-5428-43e7-8150-da7c6df9fa2f" = {
-      ignore-ca-cert = false;
-      ignore-phase2-ca-cert = false;
-    };
-
-    "org/gnome/nm-applet/eap/a3321948-2dc5-432f-85c8-e6eae1a94499" = {
-      ignore-ca-cert = false;
-      ignore-phase2-ca-cert = false;
-    };
-
-    "org/gnome/nm-applet/eap/a6c52d0c-3e46-4f94-8828-0a2d97b15261" = {
-      ignore-ca-cert = false;
-      ignore-phase2-ca-cert = false;
-    };
-
-    "org/gnome/nm-applet/eap/a7b0e4d5-2105-47a0-b9dc-efe10379e800" = {
-      ignore-ca-cert = false;
-      ignore-phase2-ca-cert = false;
-    };
-
-    "org/gnome/nm-applet/eap/aefa3717-c117-4ad8-b905-15acf8bd7733" = {
-      ignore-ca-cert = false;
-      ignore-phase2-ca-cert = false;
-    };
-
-    "org/gnome/nm-applet/eap/d7ce758c-0ce6-409d-950b-a756e1d687a0" = {
-      ignore-ca-cert = false;
-      ignore-phase2-ca-cert = false;
-    };
-
-    "org/gnome/nm-applet/eap/e1a362b5-d1b8-45f6-aabf-e0c32a08a5b3" = {
-      ignore-ca-cert = false;
-      ignore-phase2-ca-cert = false;
-    };
-
-    "org/gnome/nm-applet/eap/e5c0d2ae-9a69-4186-999b-a3005954260f" = {
-      ignore-ca-cert = false;
-      ignore-phase2-ca-cert = false;
-    };
-
     "org/gnome/papers/default" = {
       annot-color = "yellow";
       continuous = true;
@@ -707,46 +556,6 @@ with lib.hm.gvariant;
       show-sidebar = false;
       sidebar-page = "thumbnails";
       sizing-mode = "free";
-      window-ratio = mkTuple [ (mkDouble "1.4564672521653819") (mkDouble "1.2436304030217724") ];
-      zoom = mkDouble "1.2642946267281283";
-    };
-
-    "org/gnome/pomodoro/state" = {
-      timer-date = "2025-01-13T21:13:55+0000";
-      timer-elapsed = mkDouble "0.0";
-      timer-paused = false;
-      timer-score = mkDouble "0.0";
-      timer-state = "null";
-      timer-state-date = "2025-01-13T21:13:55+0000";
-      timer-state-duration = mkDouble "0.0";
-    };
-
-    "org/gnome/portal/filechooser/GitKraken Desktop" = {
-      last-folder-path = "/home/jcorbalan/Syncthing/Universidad/5to Ing. Inf./1er Cuatri/REDACTED";
-    };
-
-    "org/gnome/portal/filechooser/chromium-browser" = {
-      last-folder-path = "/home/jcorbalan/Descargas";
-    };
-
-    "org/gnome/portal/filechooser/com/github/johnfactotum/Foliate" = {
-      last-folder-path = "/home/jcorbalan/Syncthing/Lecturas";
-    };
-
-    "org/gnome/portal/filechooser/org/gnome/Loupe" = {
-      last-folder-path = "/home/jcorbalan/Imágenes";
-    };
-
-    "org/gnome/portal/filechooser/org/gnome/Papers" = {
-      last-folder-path = "/home/jcorbalan/Syncthing/Universidad/5to Ing. Inf./2ndo Cuatri/REDACTED";
-    };
-
-    "org/gnome/portal/filechooser/org/gnome/Settings" = {
-      last-folder-path = "/home/jcorbalan/Syncthing/Otros";
-    };
-
-    "org/gnome/portal/filechooser/org/gnome/tweaks" = {
-      last-folder-path = "/home/jcorbalan/Syncthing/Fotos/Fondos de pantalla";
     };
 
     "org/gnome/settings-daemon/plugins/color" = {
@@ -836,15 +645,6 @@ with lib.hm.gvariant;
       name = "nixos-portatil";
     };
 
-    "org/gnome/shell/extensions/gsconnect/device/7c3271f1-1e98-4726-8cd3-d7e277228119" = {
-      incoming-capabilities = [ "kdeconnect.battery" "kdeconnect.battery.request" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.connectivity_report" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.sms.messages" "kdeconnect.systemvolume.request" "kdeconnect.telephony" ];
-      last-connection = "lan://10.42.0.1:1716";
-      name = "REDACTED";
-      outgoing-capabilities = [ "kdeconnect.battery" "kdeconnect.battery.request" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.connectivity_report.request" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.runcommand.request" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.sms.request" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.telephony.request" "kdeconnect.telephony.request_mute" ];
-      supported-plugins = [ "battery" "clipboard" "findmyphone" "mousepad" "mpris" "notification" "ping" "runcommand" "share" ];
-      type = "laptop";
-    };
-
     "org/gnome/shell/extensions/gtk4-ding" = {
       add-volumes-opposite = false;
       arrangeorder = "KIND";
@@ -906,13 +706,11 @@ with lib.hm.gvariant;
       date-format = "regular";
       location-mode = "path-bar";
       show-hidden = false;
-      sidebar-width = 140;
       sort-column = "name";
       sort-directories-first = true;
       sort-order = "ascending";
       type-format = "category";
       view-type = "list";
-      window-size = mkTuple [ 859 372 ];
     };
 
     "org/gtk/settings/file-chooser" = {
@@ -921,18 +719,10 @@ with lib.hm.gvariant;
       show-hidden = false;
       show-size-column = true;
       show-type-column = true;
-      sidebar-width = 355;
       sort-column = "name";
       sort-directories-first = false;
       sort-order = "ascending";
       type-format = "category";
-      window-position = mkTuple [ 26 23 ];
-      window-size = mkTuple [ 1203 871 ];
-    };
-
-    "org/virt-manager/virt-manager" = {
-      manager-window-height = 1011;
-      manager-window-width = 1920;
     };
 
     "org/virt-manager/virt-manager/confirm" = {
@@ -960,10 +750,6 @@ with lib.hm.gvariant;
       enable-disk-poll = true;
       enable-memory-poll = true;
       enable-net-poll = true;
-    };
-
-    "org/virt-manager/virt-manager/urls" = {
-      isos = [ "/home/jcorbalan/Descargas/REDACTED.iso" "/home/jcorbalan/Descargas/REDACTED.iso" "/home/jcorbalan/Descargas/REDACTED.iso" ];
     };
 
     "org/virt-manager/virt-manager/vmlist-fields" = {
