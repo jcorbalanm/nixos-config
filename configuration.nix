@@ -26,7 +26,6 @@
 
   home-manager.useGlobalPkgs = true;
 
-  # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   #boot.loader.grub.enable = true;
 
@@ -35,21 +34,12 @@
   boot.kernelPackages = pkgs.linuxPackages_zen;
   #boot.kernelPackages = pkgs.linuxPackages_6_11;
 
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true;
 
   networking.resolvconf.dnsExtensionMechanism = false;
-  #networking.dnsExtensionMechanism = false;
 
-  # Set your time zone.
   time.timeZone = "Europe/Madrid";
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "es_ES.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -64,40 +54,20 @@
     LC_TIME = "es_ES.UTF-8";
   };
 
-  # Was not IN VM
   console = {
     font = "Lat2-Terminus16";
     keyMap = "es";
-  #   useXkbConfig = true; # use xkb.options in tty.
   };
 
-  # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
-  #services.xserver.displayManager.sddm.enable = true;
   services.desktopManager.gnome.enable = true;
-  #services.xserver.desktopManager.xterm.enable = true;
-  #services.xserver.desktopManager.xfce.enable = true;
-
-  #services.xserver.desktopManager.cinnamon.enable = true;
   services.udev.packages = with pkgs; [ gnome-settings-daemon ];
 
-  # Configure keymap in X11
   services.xserver.xkb.layout = "es";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
-  # Enable CUPS to print documents.
   services.printing.enable = true;
-
-  # Enable sound.
-  #hardware.pulseaudio.enable = true;
-  # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
@@ -111,11 +81,10 @@
 
 
   programs.zsh.enable = true;
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jcorbalan = {
     isNormalUser = true;
     description = "Julio Corbalán Moreno";
-    extraGroups = [ "wheel" "networkmanager" "audio"]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "audio"];
     shell = pkgs.zsh;
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOnJczJdAsB8wuI9yDWbRTCkclSK+vi6gFIeMWXHB7OU jcorbalan@mailbox.org"
@@ -262,11 +231,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #   wget
     libimobiledevice
     ifuse # optional, to mount using 'ifuse'
     ffmpeg-full
@@ -394,39 +359,11 @@
   networking.firewall.interfaces."tailscale0".allowedTCPPorts = [ 22 ];
   networking.firewall.checkReversePath = "loose";
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
   # Syncthing ports
   #networking.firewall.allowedTCPPorts = [ 8384 22000 32400 20000 ];
   #networking.firewall.allowedUDPPorts = [ 22000 21027 32400 20000 ];
 
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
-
-  # This option defines the first version of NixOS you have installed on this particular machine,
-  # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
-  #
-  # Most users should NEVER change this value after the initial install, for any reason,
-  # even if you've upgraded your system to a new NixOS release.
-  #
-  # This value does NOT affect the Nixpkgs version your packages and OS are pulled from,
-  # so changing it will NOT upgrade your system - see https://nixos.org/manual/nixos/stable/#sec-upgrading for how
-  # to actually do that.
-  #
-  # This value being lower than the current NixOS release does NOT mean your system is
-  # out of date, out of support, or vulnerable.
-  #
-  # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
-  # and migrated your data accordingly.
-  #
-  # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.05";
 
 }
 
