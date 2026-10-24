@@ -359,10 +359,6 @@
   networking.firewall.interfaces."tailscale0".allowedTCPPorts = [ 22 ];
   networking.firewall.checkReversePath = "loose";
 
-  # Syncthing ports
-  #networking.firewall.allowedTCPPorts = [ 8384 22000 32400 20000 ];
-  #networking.firewall.allowedUDPPorts = [ 22000 21027 32400 20000 ];
-
   system.stateVersion = "24.05";
 
 }
