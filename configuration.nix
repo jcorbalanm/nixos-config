@@ -115,7 +115,7 @@
   users.users.jcorbalan = {
     isNormalUser = true;
     description = "Julio Corbalán Moreno";
-    extraGroups = [ "wheel" "networkmanager" "docker" "audio"]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "audio"]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOnJczJdAsB8wuI9yDWbRTCkclSK+vi6gFIeMWXHB7OU jcorbalan@mailbox.org"
@@ -352,7 +352,6 @@
   };
   virtualisation.spiceUSBRedirection.enable = true;
 
-  virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
     enable = true;
     setSocketVariable = true;
