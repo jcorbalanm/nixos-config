@@ -215,8 +215,8 @@
         change-mac = "sudo bash -c 'sudo tailscale down; systemctl stop NetworkManager; macchanger -r wlp4s0; sudo systemctl start NetworkManager'";
         restore-mac = "sudo bash -c 'sudo tailscale down; systemctl stop NetworkManager; macchanger -p wlp4s0; sudo systemctl start NetworkManager'";
         rebuild = "checkout-branch && (setopt pipefail; nixos-rebuild switch |& nom) && uncheckout-branch";
-	      disable-battery-conservation = "sudo /home/jcorbalan/lenovo-legion5-15arh05-scripts/BatteryConservation/disable_battery_conservation.sh";
-	      enable-battery-conservation = "sudo /home/jcorbalan/lenovo-legion5-15arh05-scripts/BatteryConservation/enable_battery_conservation.sh";
+        disable-battery-conservation = "sudo /home/jcorbalan/lenovo-legion5-15arh05-scripts/BatteryConservation/disable_battery_conservation.sh";
+        enable-battery-conservation = "sudo /home/jcorbalan/lenovo-legion5-15arh05-scripts/BatteryConservation/enable_battery_conservation.sh";
       };
       history.size = 10000;
     };
@@ -347,7 +347,7 @@
   programs.virt-manager.enable = true;
   users.groups.libvirtd.members = ["jcorbalan"];
   virtualisation.libvirtd = {
-  enable = true;
+    enable = true;
     qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
   };
   virtualisation.spiceUSBRedirection.enable = true;
