@@ -194,8 +194,6 @@
 
   #services.squeezelite.enable = true;
 
-  #services.plex.enable = true;
-
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
