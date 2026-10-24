@@ -5,13 +5,6 @@
 
 { config, lib, pkgs, ... }:
 
-#environment.sessionVariables.GST_PLUGIN_SYSTEM_PATH_1_0 = lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0" (with pkgs.gst_all_1; [
-#  gst-plugins-good
-#  gst-plugins-bad
-#  gst-plugins-ugly
-#  gst-libav
-#]);
-
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -21,7 +14,7 @@
       <home-manager/nixos>
     ];
 
- 
+
   nix.nixPath = [
     "nixos-config=${config.users.users.jcorbalan.home}/Repositorios/nixos-config/configuration.nix"
     "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
@@ -35,7 +28,7 @@
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
-  #boot.loader.grub.enable = true;  
+  #boot.loader.grub.enable = true;
 
   boot.loader.efi.canTouchEfiVariables = true;
   # boot.kernelParams = ["amdgpu.backlight=0"];
@@ -58,7 +51,7 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "es_ES.UTF-8";
-  
+
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "es_ES.UTF-8";
     LC_IDENTIFICATION = "es_ES.UTF-8";
@@ -70,7 +63,7 @@
     LC_TELEPHONE = "es_ES.UTF-8";
     LC_TIME = "es_ES.UTF-8";
   };
-  
+
   # Was not IN VM
   console = {
     font = "Lat2-Terminus16";
@@ -128,19 +121,10 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOnJczJdAsB8wuI9yDWbRTCkclSK+vi6gFIeMWXHB7OU jcorbalan@mailbox.org"
     ];
   };
-  #home-manager.users.jcorbalan = { pkgs, ... }: {
-  #  program.zsh.enable = true;
-
-
   home-manager.users.jcorbalan = { pkgs, ... }: {
     imports = [
       ./dconf.nix
     ];
-
-    #isNormalUser = true;
-    #home = "/home/jcorbalan";
-    #description = "Julio... Corbalán Moreno";
-    #extraGroups = [ "wheel" "networkmanager" "vboxusers" "docker"]; # Enable ‘sudo’ for the user
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -260,7 +244,7 @@
         signByDefault = true;
       };
     };
-  
+
     systemd.user.startServices = true;
     systemd.user.services.squeezelite =
       let name = "myplayer";
@@ -276,18 +260,6 @@
 
     home.stateVersion = "24.05";
   };
-
-  #programs.firefox.enable;
-  #nixpkgs.overlays =
-  #  let
-  #    # Change this to a rev sha to pin
-  #    moz-rev = "master";
-  #    moz-url = builtins.fetchTarball { url = "https://github.com/mozilla/nixpkgs-mozilla/archive/${moz-rev}.tar.gz";};
-  #    nightlyOverlay = (import "${moz-url}/firefox-overlay.nix");
-  #  in [
-  #    nightlyOverlay
-  #  ];
-  #programs.firefox.package = pkgs.latest.firefox-nightly-bin;
 
   nixpkgs.config.allowUnfree = true;
 
@@ -372,45 +344,20 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
-  #hardware.opengl.driSupport32Bit = true;
-
-  #gtk.enable = true;
-
-  #gtk = {
-  #  enable = true;
-
-  #  iconTheme = {
-  #    name = "Tela-Icon-Theme";
-  #    package = pkgs.tela-icon-theme;
-  #  };
-
-    # home.sessionVariables.GTK_THEME = "Tela-Icon-Theme";
-  #};
-
-  #environment.systemPackages.pkgs.podman-compose = true;
-  #virtualisation.virtualbox.host.enable = true;
-  #virtualisation.virtualbox.host.enableExtensionPack = true;
-  #users.extraGroups.vboxusers.members = [ "jcorbalan" ];
-
   programs.virt-manager.enable = true;
   users.groups.libvirtd.members = ["jcorbalan"];
   virtualisation.libvirtd = {
   enable = true;
     qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
-  };  
-  #virtualisation.libvirtd.enable = true;
+  };
   virtualisation.spiceUSBRedirection.enable = true;
-
-
-  #APAÑO VIRTUALBOX
-  #boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
 
   virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
     enable = true;
     setSocketVariable = true;
   };
-  
+
   #virtualisation.podman = {
   #  enable = true;
   #  dockerCompat = true;
@@ -426,25 +373,13 @@
 
   #services.squeezelite.enable = true;
 
-  #services.plex = {
-  #  enable = true; #false; #true;
-  #  openFirewall = true;
-  #  user = "jcorbalan";
-  #};
+  #services.plex.enable = true;
 
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
   #ios tethering
   services.usbmuxd.enable = true;
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # List services that you want to enable:
 
