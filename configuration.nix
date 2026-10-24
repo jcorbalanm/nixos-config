@@ -253,6 +253,7 @@
       settings.user.name = "Julio Corbalán Moreno";
       settings.user.email = "jcorbalan@mailbox.org";
       signing = {
+        key = "EA6C6CFCF9DF839E954D899BCED6C3ED3A5085E7";
         signByDefault = true;
       };
     };
