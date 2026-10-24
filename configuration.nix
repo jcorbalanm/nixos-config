@@ -369,7 +369,6 @@
   services.syncthing.configDir = "/home/jcorbalan/.config/syncthing";
   services.tailscale.enable = true;
   services.tailscale.useRoutingFeatures = "client";
-  networking.firewall.checkReversePath = "loose";
 
   #services.squeezelite.enable = true;
 
@@ -397,6 +396,7 @@
     };
   };
   networking.firewall.interfaces."tailscale0".allowedTCPPorts = [ 22 ];
+  networking.firewall.checkReversePath = "loose";
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
