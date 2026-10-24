@@ -247,8 +247,7 @@
 
     systemd.user.startServices = true;
     systemd.user.services.squeezelite =
-      let name = "myplayer";
-          server = "192.168.0.188";
+      let server = "192.168.0.188";
       in {
         Unit.Description = "squeezelite player";
         Unit.After = [ "network-online.target" "sound.target" ];
