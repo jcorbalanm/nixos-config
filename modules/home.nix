@@ -86,13 +86,11 @@
     shellAliases = {
       ls = "eza --icons";
       ll = "/run/current-system/sw/bin/ls -l";
-      checkout-branch = "cd /home/jcorbalan/Repositorios/nixos-config && git fetch origin && git checkout $HOST && git reset --hard origin/$HOST && cd -";
-      uncheckout-branch = "cd /home/jcorbalan/Repositorios/nixos-config && git checkout master && cd -";
-      update = " checkout-branch && (setopt pipefail; sudo -v && sudo nixos-rebuild switch |& nom) && uncheckout-branch";
-      upgrade = "checkout-branch && (setopt pipefail; sudo -v && sudo nixos-rebuild switch --upgrade |& nom) && uncheckout-branch";
+      update = "cd /home/jcorbalan/Repositorios/nixos-config && git pull && (setopt pipefail; sudo -v && sudo nixos-rebuild switch --flake .#$HOST --impure |& nom)";
+      upgrade = "cd /home/jcorbalan/Repositorios/nixos-config && git pull && (setopt pipefail; sudo -v && sudo nixos-rebuild switch --flake .#$HOST --impure --upgrade |& nom)";
       change-mac = "sudo bash -c 'sudo tailscale down; systemctl stop NetworkManager; macchanger -r wlp4s0; sudo systemctl start NetworkManager'";
       restore-mac = "sudo bash -c 'sudo tailscale down; systemctl stop NetworkManager; macchanger -p wlp4s0; sudo systemctl start NetworkManager'";
-      rebuild = "checkout-branch && (setopt pipefail; nixos-rebuild switch |& nom) && uncheckout-branch";
+      rebuild = "cd /home/jcorbalan/Repositorios/nixos-config && git pull && (setopt pipefail; nixos-rebuild switch --flake .#$HOST --impure |& nom)";
       disable-battery-conservation = "sudo /home/jcorbalan/lenovo-legion5-15arh05-scripts/BatteryConservation/disable_battery_conservation.sh";
       enable-battery-conservation = "sudo /home/jcorbalan/lenovo-legion5-15arh05-scripts/BatteryConservation/enable_battery_conservation.sh";
     };

@@ -3,26 +3,13 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, laptop, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      <home-manager/nixos>
-    ];
-
-
-  nix.nixPath = [
-    "nixos-config=${config.users.users.jcorbalan.home}/Repositorios/nixos-config/configuration.nix"
-    "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
-    "/nix/var/nix/profiles/per-user/root/channels"
-  ];
-
-
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   home-manager.useGlobalPkgs = true;
+  home-manager.extraSpecialArgs = { inherit laptop; };
 
   boot.loader.systemd-boot.enable = true;
   #boot.loader.grub.enable = true;

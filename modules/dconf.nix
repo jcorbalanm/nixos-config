@@ -1,5 +1,5 @@
 # Generated via dconf2nix: https://github.com/nix-commmunity/dconf2nix
-{ lib, ... }:
+{ lib, laptop, ... }:
 
 with lib.hm.gvariant;
 
@@ -682,7 +682,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/vitals" = {
-      hot-sensors = [ "_processor_usage_" "_memory_usage_" "_system_uptime_" "_temperature_k10temp_tctl_" ];
+      hot-sensors = [ "_processor_usage_" "_memory_usage_" "_system_uptime_" "_temperature_k10temp_tctl_" ]
+        ++ lib.optional laptop "_battery_time_left";
       show-battery = true;
     };
     "org/gnome/shell/weather" = {
