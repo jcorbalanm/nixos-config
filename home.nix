@@ -87,8 +87,8 @@
       ll = "/run/current-system/sw/bin/ls -l";
       checkout-branch = "cd /home/jcorbalan/Repositorios/nixos-config && git fetch --all && git checkout $HOST && git pull && cd -";
       uncheckout-branch = "cd /home/jcorbalan/Repositorios/nixos-config && git checkout master && cd -";
-      update = " checkout-branch && (setopt pipefail; sudo nixos-rebuild switch |& nom) && uncheckout-branch";
-      upgrade = "checkout-branch && (setopt pipefail; sudo nixos-rebuild switch --upgrade |& nom) && uncheckout-branch";
+      update = " checkout-branch && (setopt pipefail; sudo -v && sudo nixos-rebuild switch |& nom) && uncheckout-branch";
+      upgrade = "checkout-branch && (setopt pipefail; sudo -v && sudo nixos-rebuild switch --upgrade |& nom) && uncheckout-branch";
       change-mac = "sudo bash -c 'sudo tailscale down; systemctl stop NetworkManager; macchanger -r wlp4s0; sudo systemctl start NetworkManager'";
       restore-mac = "sudo bash -c 'sudo tailscale down; systemctl stop NetworkManager; macchanger -p wlp4s0; sudo systemctl start NetworkManager'";
       rebuild = "checkout-branch && (setopt pipefail; nixos-rebuild switch |& nom) && uncheckout-branch";
