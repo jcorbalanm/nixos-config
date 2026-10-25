@@ -29,8 +29,8 @@
 
   boot.loader.efi.canTouchEfiVariables = true;
   # boot.kernelParams = ["amdgpu.backlight=0"];
-  boot.kernelPackages = pkgs.linuxPackages_zen;
-  #boot.kernelPackages = pkgs.linuxPackages_6_11;
+  boot.kernelPackages = pkgs.linuxPackages;
+  #boot.kernelPackages = pkgs.linuxPackages_zen;
 
   networking.networkmanager.enable = true;
 
