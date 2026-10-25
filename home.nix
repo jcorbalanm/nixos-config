@@ -26,6 +26,7 @@
     spotify-tray
     spotify-qt
     notion-app-enhanced
+    claude-code
     #vscode
     #vscodium
     blackbox-terminal
