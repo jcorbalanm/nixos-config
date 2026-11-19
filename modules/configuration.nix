@@ -204,5 +204,9 @@
 
   system.stateVersion = "24.05";
 
+  systemd.tmpfiles.rules = [
+    "L+ /etc/nixos/flake.nix - - - - /home/jcorbalan/Repositorios/nixos-config/flake.nix"
+  ];
+
 }
 
