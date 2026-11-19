@@ -23,8 +23,8 @@
     in
     {
       nixosConfigurations = {
-        portatil = mkHost "portatil";
-        pc = mkHost "pc";
+        nixos-portatil = mkHost "portatil";
+        nixos-pc = mkHost "pc";
       };
     };
 }
