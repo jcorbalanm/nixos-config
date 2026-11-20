@@ -273,6 +273,7 @@ spawn-at-startup "waybar"
 
 // Lock after 10 minutes idle and before suspend.
 spawn-at-startup "swayidle" "-w" "timeout" "600" "swaylock -f" "before-sleep" "swaylock -f"
+spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/jcorbalan/Imágenes/Fondos de pantalla/2025/kali-blur-base.png"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

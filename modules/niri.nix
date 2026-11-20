@@ -15,7 +15,7 @@ in
   environment.systemPackages = [ pkgs.xwayland-satellite ]; # X11 apps; niri starts it on demand
 
   home-manager.users.jcorbalan = {
-    home.packages = with pkgs; [ swayidle brightnessctl playerctl ];
+    home.packages = with pkgs; [ swayidle swaybg brightnessctl playerctl ];
     xdg.configFile."niri/config.kdl".source = niriConfig;
 
     programs.fuzzel.enable = true;
